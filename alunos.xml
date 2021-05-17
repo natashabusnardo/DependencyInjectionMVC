@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="DTO.Aluno">
+    <void property="cpf">
+     <string>123.456.789-11</string>
+    </void>
+    <void property="dataNasc">
+     <object class="java.util.Date">
+      <long>947642400000</long>
+     </object>
+    </void>
+    <void property="email">
+     <string>email@email.com</string>
+    </void>
+    <void property="matricula">
+     <string>70854517</string>
+    </void>
+    <void property="nome">
+     <string>Jefferson</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
