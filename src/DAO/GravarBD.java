@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import BO.Conexao;
+import BO.Gravacao;
 import DTO.Aluno;
-import DTO.Gravacao;
 import DTO.ListaAlunos;
 
 
@@ -24,7 +24,7 @@ public class GravarBD implements Gravacao {
             try {
                 Connection conn = Conexao.conectar();
                 String sql = "INSERT INTO " + NOMEDATABELA
-                        + " (cpf,email,matricula,Pessoa_nome,dataNascimento) VALUES (?,?,?,?,?);";
+                        + " (cpf,email,matricula,nome,data_nasc) VALUES (?,?,?,?,?);";
                 PreparedStatement ps = conn.prepareStatement(sql);
 
                 ps.setString(1, aluno.getCpf());
@@ -66,7 +66,7 @@ public class GravarBD implements Gravacao {
         try {
             while (rs.next()) {
                 Aluno obj = new Aluno();
-                obj.setNome(rs.getString("Pessoa_nome"));
+                obj.setNome(rs.getString("nome"));
                 obj.setCpf(rs.getString("cpf"));
                 obj.setEmail(rs.getString("email"));
                 obj.setMatricula(rs.getString("matricula"));

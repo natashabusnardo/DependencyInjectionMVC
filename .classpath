@@ -8,6 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Na.tasha/eclipse-workspace/Pizzaria/lib/gson-2.8.5-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Na.tasha/eclipse-workspace/Pizzaria/lib/gson-2.8.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Na.tasha/eclipse-workspace/MVC/lib/mysql-connector-java.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Na.tasha/eclipse-workspace/MVC/lib/mysql-connector-java-8.0.25.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

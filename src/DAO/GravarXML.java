@@ -11,8 +11,8 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
+import BO.Gravacao;
 import DTO.Aluno;
-import DTO.Gravacao;
 
 public class GravarXML implements Gravacao {
 

@@ -1,6 +1,5 @@
 package BO;
 
-import DTO.ConexaoBD;
 import java.sql.DriverManager;
 import java.sql.Connection;
 
@@ -10,13 +9,14 @@ public class Conexao {
     public static Connection conectar() {
     	try {
             
-    		Class.forName("com.mysql.jdbc.Driver");
+    		Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost/" + NOME_DO_BANCO;
-            return DriverManager.getConnection(url,"root","");
+            return DriverManager.getConnection(url,"root","1234");
         } catch (Exception e) {
-            //System.err.println("Erro: " + e.toString());
+            System.err.println("Erro: " + e.toString());
             //e.printStackTrace();
             return null;
         }
     }
 }
+

@@ -7,12 +7,12 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import BO.Gravacao;
 import BO.Persistencia;
 import DAO.GravarCSV;
 import DAO.GravarJSON;
 import DAO.GravarXML;
 import DTO.Aluno;
-import DTO.Gravacao;
 import DTO.ListaAlunos;
 import DTO.Pessoa;
 
@@ -53,6 +53,7 @@ public class main {
 		pers2.gravar(alunos);
 		pers3.gravar(alunos);
 		pers4.gravar(alunos);
+		
 		
 	}
 

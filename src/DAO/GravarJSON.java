@@ -12,8 +12,8 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import BO.Gravacao;
 import DTO.Aluno;
-import DTO.Gravacao;
 import DTO.ListaAlunos;
 
 public class GravarJSON implements Gravacao {
