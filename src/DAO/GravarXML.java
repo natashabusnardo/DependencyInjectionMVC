@@ -6,6 +6,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -33,15 +34,29 @@ public class GravarXML implements Gravacao {
 
 	public boolean gravar(List<Aluno> lista) {
 		try {
-			FileOutputStream fos = new FileOutputStream("alunos.xml", true);
-			BufferedOutputStream buff = new BufferedOutputStream(fos);
-			XMLEncoder xml = new XMLEncoder(buff);
-			xml.writeObject(lista);
-			xml.close();
+			FileWriter writer = new FileWriter("persistencia.xml");
 
+			String dadosAluno = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>";
+
+			for (Aluno aluno : lista) {
+				dadosAluno += "<aluno>\n";
+				dadosAluno += "<nome>" + aluno.getNome() + "</nome>";
+				dadosAluno += "<matricula>" + aluno.getMatricula() + "</matricula>";
+				dadosAluno += "<CPF>" + aluno.getCpf() + "</CPF>";
+				dadosAluno += "<email>" + aluno.getEmail() + "</email>";
+				dadosAluno += "<dataNascimento>" + aluno.getDataNasc().toString() + "</dataNascimento>";
+				dadosAluno += "</aluno>\n";
+			}
+
+			writer.write(dadosAluno);
+
+			writer.flush();
+			writer.close();
 			return true;
 		} catch (IOException e) {
+			e.printStackTrace();
 			return false;
 		}
 	}
+
 }
